@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_307427_social_co.SctUserIcon</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>SctUserIcon</name>
+        <script><![CDATA[var SctUserIcon = Class.create();
+SctUserIcon.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	
+	getFieldName:function(arr){
+		var allFields =[];
+		if(arr.length){
+			var gr = new GlideRecordSecure('sys_dictionary');
+			gr.addQuery("sys_idIN"+arr);
+			gr.addActiveQuery();
+			gr.query();
+			while (gr.next()) {
+				allFields.push(gr.getValue('element'));
+			}
+		}
+		
+		return allFields;
+	},
+
+	getSrcData: function() {
+		var table = this.getParameter('sysparm_current_table');
+		var arrID = [];
+		var resArr = [];
+		var gr = new GlideRecordSecure('x_307427_social_co_users_configuration');
+		gr.addQuery("table", table);
+		gr.addActiveQuery();
+		gr.query();
+		while (gr.next()) {
+			arrID =gr.getValue('target_ref');
+			arrIMG = gr.getValue('socials');
+			resArr.push({
+				user: gr.getValue('user'),
+				social_url: gr.getValue('social_url'),
+				social_network: gr.getValue('social_network')||'',
+				fields: (arrID)?this.getFieldName(arrID):[]
+			});
+		}
+		return JSON.stringify(resArr);
+		
+	},
+    getFields: function() {
+        var table = current.table_name;
+        var listTable = [];
+        var qualifer = "";
+        get_tables(table);
+
+        function get_tables(tname) {
+            var gr = new GlideRecord("sys_db_object");
+            gr.addQuery("name", tname);
+            gr.query();
+            if (gr.next()) {
+                listTable.push(gr.name.toString());
+                qualifer = qualifer + 'name=' + gr.name.toString() + '^OR';
+                if (gr.super_class != "") {
+                    get_tables(gr.super_class.name.toString());
+                }
+            }
+        }
+        qualifer = qualifer.slice(0, -3);
+        qualifer = qualifer + '^internal_type=string^ORinternal_type=string_full_utf8^ORinternal_type=html^choice=0^ORchoice=2^ORchoice=NULL^EQ';
+        return qualifer;
+    },
+	
+    getFields2user: function(table) {
+        return "name=" + table + "^internal_type=reference^reference=sys_user";
+    },
+    type: 'SctUserIcon'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-07-07 19:01:33</sys_created_on>
+        <sys_id>63a173a6dbf55010441ce04a489619df</sys_id>
+        <sys_mod_count>24</sys_mod_count>
+        <sys_name>SctUserIcon</sys_name>
+        <sys_package display_value="Reach Me Out" source="x_307427_social_co">312c4feedb355010441ce04a48961939</sys_package>
+        <sys_policy>protected</sys_policy>
+        <sys_scope display_value="Reach Me Out">312c4feedb355010441ce04a48961939</sys_scope>
+        <sys_update_name>sys_script_include_63a173a6dbf55010441ce04a489619df</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-07-08 22:40:35</sys_updated_on>
+    </sys_script_include>
+</record_update>

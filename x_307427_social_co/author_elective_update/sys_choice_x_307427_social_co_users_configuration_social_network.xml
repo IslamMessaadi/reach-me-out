@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="social_network" table="x_307427_social_co_users_configuration" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>social_network</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>FaceBook</label>
+            <language>en</language>
+            <name>x_307427_social_co_users_configuration</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-07-07 17:56:44</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>cf13aba6dbb55010441ce04a48961971</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-07-07 17:56:44</sys_updated_on>
+            <value>facebook</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>social_network</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Instagram</label>
+            <language>en</language>
+            <name>x_307427_social_co_users_configuration</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-07-07 17:57:12</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b723232adbb55010441ce04a489619a0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-07-07 17:57:12</sys_updated_on>
+            <value>instagram</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>social_network</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>LinkedIn</label>
+            <language>en</language>
+            <name>x_307427_social_co_users_configuration</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-07-07 17:56:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8f03272adbb55010441ce04a489619fb</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-07-07 22:02:42</sys_updated_on>
+            <value>linkedin</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>social_network</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Outlook</label>
+            <language>en</language>
+            <name>x_307427_social_co_users_configuration</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-07-09 12:51:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>687074572ff110104d2d309cf699b612</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-07-09 12:51:45</sys_updated_on>
+            <value>outlook</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>social_network</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Skype</label>
+            <language>en</language>
+            <name>x_307427_social_co_users_configuration</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-07-08 07:45:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>49d0a6b6db319010441ce04a48961915</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-07-08 07:45:38</sys_updated_on>
+            <value>skype</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>social_network</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Whatsapp</label>
+            <language>en</language>
+            <name>x_307427_social_co_users_configuration</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-07-08 07:45:17</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1ba026b6db319010441ce04a48961996</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-07-08 07:45:17</sys_updated_on>
+            <value>whatsapp</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>social_network</element>
+            <name>x_307427_social_co_users_configuration</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-07-07 17:56:30</sys_created_on>
+            <sys_id>7061751bdb79d010441ce04a489619a8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>social_network</sys_name>
+            <sys_package display_value="Reach Me Out" source="x_307427_social_co">312c4feedb355010441ce04a48961939</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Reach Me Out">312c4feedb355010441ce04a48961939</sys_scope>
+            <sys_update_name>sys_choice_x_307427_social_co_users_configuration_social_network</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-07-07 17:56:30</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

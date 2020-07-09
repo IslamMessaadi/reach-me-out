@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_307427_social_co_users_configuration</collection>
+        <condition>(gs.hasRole("x_307427_social_co.sct.admin") ||  gs.hasRole("admin")  &amp;&amp;  gs.getSession().isInteractive())</condition>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Validate Target Table</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+	
+	var checkFields = false;
+	if (current.operation() == 'update') {
+		if (current.user == previous.user &&
+			current.table == previous.table &&
+			current.social_network == previous.social_network) {
+			/*do not do anything!...*/
+			checkFields = true;
+		}
+	}
+
+	var grConfig = new GlideRecordSecure("x_307427_social_co_users_configuration");
+	grConfig.addEncodedQuery("table=" + current.table + "^social_network=" + current.social_network + "^user=" + current.user);
+	grConfig.query();
+	if (grConfig.next()) {
+		if(!checkFields){
+			gs.addErrorMessage("Current setup has been detected (duplicate configuration not allowed)");
+			current.setAbortAction(true);
+			return;
+		}	
+	} else {
+		var varScript = "";
+		var grt = new GlideRecord("sys_script_fix");
+		grt.addQuery("sys_id", "0ff0008bdb759010441ce04a489619c0");
+		grt.query();
+		if (grt.next()) {
+			varScript = grt.getValue("script");
+		}
+
+		var gr = new GlideRecord("sys_script_client");
+		gr.addQuery('name', 'SCT_onload_' + current.table);
+		gr.query();
+		
+		if (gr.next()) {
+			gr.active = true;
+			gr.ui_type = 'All';
+			gr.type = 'onLoad';
+			gr.global = true;
+			gr.script = varScript;
+			gr.update();
+		} else {
+			gr.initialize();
+			gr.name = 'SCT_onload_' + current.table;
+			gr.table = current.table;
+			gr.active = true;
+			gr.ui_type = 'All';
+			gr.type = 'onLoad';
+			gr.global = true;
+			gr.script = varScript;
+			gr.insert();
+		}
+
+	}
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-07-07 17:08:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>92d7572edb755010441ce04a489619be</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_name>Validate Target Table</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Reach Me Out" source="x_307427_social_co">312c4feedb355010441ce04a48961939</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Reach Me Out">312c4feedb355010441ce04a48961939</sys_scope>
+        <sys_update_name>sys_script_92d7572edb755010441ce04a489619be</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-07-09 08:18:11</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=92d7572edb755010441ce04a489619be"/>
+</record_update>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="User Configurations" max_length="40" name="x_307427_social_co_users_configuration" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Social Network" mandatory="true" max_length="40" name="social_network" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="FaceBook" value="facebook"/>
+                <element inactive_on_update="false" label="Instagram" value="instagram"/>
+                <element inactive_on_update="false" label="LinkedIn" value="linkedin"/>
+                <element inactive_on_update="false" label="Outlook" value="outlook"/>
+                <element inactive_on_update="false" label="Skype" value="skype"/>
+                <element inactive_on_update="false" label="Whatsapp" value="whatsapp"/>
+            </choice>
+        </element>
+        <element label="Social Link" mandatory="true" max_length="120" name="social_url" type="string"/>
+        <element attributes="base_start=true,edge_encryption_enabled=true" label="Table" mandatory="true" max_length="80" name="table" type="table_name"/>
+        <element attributes="no_sort=true,slushbucket_ref_no_expand=true,edge_encryption_enabled=true" dependent="table" dependent_on_field="table" label="Target Ref" mandatory="true" max_length="1024" name="target_ref" reference="sys_dictionary" reference_qual="javascript: new x_307427_social_co.SctUserIcon().getFields2user(current.table)" type="glide_list" use_dependent_field="true" use_reference_qualifier="advanced"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="User" mandatory="true" max_length="32" name="user" reference="sys_user" reference_qual="active=true^locked_out=false^EQ" reference_qual_condition="active=true^locked_out=false^EQ" type="reference"/>
+        <index name="index">
+            <element name="user"/>
+        </index>
+    </element>
+</database>

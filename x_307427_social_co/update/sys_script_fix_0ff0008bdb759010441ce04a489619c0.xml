@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <before>false</before>
+        <description/>
+        <flush_cache>false</flush_cache>
+        <name>SCT Template Repo - ClientSide</name>
+        <record_for_rollback>false</record_for_rollback>
+        <run_once>false</run_once>
+        <script><![CDATA[function onLoad() {
+	/*FixScript Template Repo :: 08.07.2020*/
+	var doc$ = (!top.gsft_main)?top.document:top.gsft_main.document;
+	var $ = function(selector){return doc$.querySelector(selector);};
+	var $$ = function(selector){return doc$.querySelectorAll(selector);};
+
+	var $append_icon = function(data) {
+		var fieldTrg = g_form.getControl(data.field);
+		if(!fieldTrg) return;
+		var URL= data.social_url || '';
+		fieldTrg = fieldTrg.parentNode;
+		var link = doc$.createElement("a");
+		link.href = URL;
+		link.target='_blank';
+		var icon = doc$.createElement("img");
+		icon.className="btn btn-default";
+		icon.title = getMessage(data.social_network);
+		icon.src= data.social_network + '.png';
+		icon.style.width="30px"; 
+		icon.style.margin="3px 2px";
+		icon.style.padding="0";
+		link.appendChild(icon);
+		fieldTrg.appendChild(link);
+	};
+	
+	function srcFn (response){
+		var result = response.responseXML.documentElement.getAttribute("answer");
+		var objArr= JSON.parse(result);
+		var arr=[];
+		objArr.length && objArr.forEach(function(e){
+			if(e.fields.length){
+				e.fields.forEach(function(f){
+					if(g_form.getValue(f) && g_form.getValue(f) == e.user ){
+						arr.push({user:e.user,field:f,social_network:e.social_network,social_url:e.social_url});
+					}
+						
+				});
+			}
+		});
+		
+		arr.length && arr.forEach(function(r){
+			$append_icon(r);
+		});	
+	}
+	
+	try {
+		var tsrc = new GlideAjax('x_307427_social_co.SctUserIcon');
+		tsrc.addParam('sysparm_name', 'getSrcData');
+		tsrc.addParam('sysparm_current_table', g_form.getTableName());
+		tsrc.getXML(srcFn);
+		
+	} catch (e) {
+		g_form.addErrorMessage(e.message);
+	}
+}]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-07-08 14:46:41</sys_created_on>
+        <sys_id>0ff0008bdb759010441ce04a489619c0</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>SCT Template Repo - ClientSide</sys_name>
+        <sys_package display_value="Reach Me Out" source="x_307427_social_co">312c4feedb355010441ce04a48961939</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Reach Me Out">312c4feedb355010441ce04a48961939</sys_scope>
+        <sys_update_name>sys_script_fix_0ff0008bdb759010441ce04a489619c0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-07-08 22:46:05</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>
