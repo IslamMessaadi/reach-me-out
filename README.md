@@ -4,7 +4,7 @@
 </p>
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/37014061/87202918-d4c0a500-c301-11ea-9170-f9ee0a72eeec.jpg"/>
+  <img src="https://user-images.githubusercontent.com/37014061/87202918-d4c0a500-c301-11ea-9170-f9ee0a72eeec.jpg" alt="app-form"/>
 </p>
 
 # On User Configurations Table Form: 
@@ -21,7 +21,7 @@
 
 # Output: 
  <p align="center">
-  <img src="https://user-images.githubusercontent.com/37014061/87136919-73b2b600-c29c-11ea-9b78-b370b91df3e8.JPG" alt="app-result"/>
+  <img src="https://user-images.githubusercontent.com/37014061/87205388-9f1eba80-c307-11ea-8223-645cf985ba1a.jpg" alt="app-result"/>
  </p>
 
 # Troubleshooting:
