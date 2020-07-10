@@ -10,7 +10,7 @@
 # On User Configurations Table Form: 
 <ul>
   <li><b>Active:</b> Only active records would be considerable</li>
-  <li><b>Config OK:</b> Shows the app config status *<b>Important:</b> should be true (checked)</li>
+  <li><b>Config OK:</b> Shows the app config status *<b>Important:</b> app health indicator (checked == all ok).</li>
   <li><b>User:</b> Ref field to user oob sys_user table</li>
   <li><b>Social Link:</b> Valid link corresponded to the social network choice</li>
   <li><b>Social Network:</b> Custom choice list determine social network icon that would be displayed on target form</li>
