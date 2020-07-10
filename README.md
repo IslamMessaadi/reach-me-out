@@ -4,7 +4,7 @@
 </p>
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/37014061/87202249-70e9ac80-c300-11ea-8484-94ef5ef7ca73.PNG"/>
+  <img src="https://user-images.githubusercontent.com/37014061/87202918-d4c0a500-c301-11ea-9170-f9ee0a72eeec.jpg"/>
 </p>
 
 **On User Configurations Table Form:** 
