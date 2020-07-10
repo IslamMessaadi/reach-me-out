@@ -7,7 +7,7 @@
   <img src="https://user-images.githubusercontent.com/37014061/87202918-d4c0a500-c301-11ea-9170-f9ee0a72eeec.jpg"/>
 </p>
 
-**On User Configurations Table Form:** 
+# On User Configurations Table Form: 
 <ul>
   <li><b>Active:</b> Only active records would be considerable</li>
   <li><b>Config OK:</b> Shows the app config status *<b>Important:</b> should be true (checked)</li>
@@ -19,15 +19,18 @@
   <li><b>Target Ref:</b> filtred list contain user-ref fields type from the selected table</li>
 </ul>
 
-**Output:** 
+# Output: 
  <p align="center">
   <img src="https://user-images.githubusercontent.com/37014061/87136919-73b2b600-c29c-11ea-9b78-b370b91df3e8.JPG" alt="app-result"/>
  </p>
 
-**Troubleshooting:**
+# Troubleshooting:
  <p align="left">
    In case of <b>..cross-scope access policy</b> issue, please set the client script table <b>sys_script_client</b> accessibility to <b>All application scope</b> with <b>Can create & Can update</b> privileges as described in this article: https://hi.service-now.com/kb_view.do?sysparm_article=KB0727180
   </p>
+  
+# Latest update: 
+**10.07.2020 :: Reach-Me-Out-v1.0** 
 
 # Generated files
 This repository contains generated files and a checksum.
