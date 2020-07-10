@@ -16,7 +16,7 @@
   <li><b>Social Network:</b> Custom choice list determine social network icon that would be displayed on target form</li>
   <li><b>Client Controller:</b> Link to newly created Client script</li>
   <li><b>Table:</b> Target table</li>
-  <li><b>Target Ref:</b> filtred list contain user-ref fields type from the selected table</li>
+  <li><b>Target Ref:</b> filtered list contain user-ref fields type from the selected table</li>
 </ul>
 
 # Output: 
