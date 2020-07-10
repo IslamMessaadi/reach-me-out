@@ -4,16 +4,17 @@
 </p>
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/37014061/87136513-e7a08e80-c29b-11ea-9d25-ac6f7ba1794f.JPG" alt="app-form"/>
+  <img src="https://user-images.githubusercontent.com/37014061/87202249-70e9ac80-c300-11ea-8484-94ef5ef7ca73.PNG"/>
 </p>
 
 **On User Configurations Table Form:** 
 <ul>
   <li><b>Active:</b> Only active records would be considerable</li>
+  <li><b>Config OK:</b> Shows the app config status *<b>Important:</b> should be true (checked)</li>
   <li><b>User:</b> Ref field to user oob sys_user table</li>
   <li><b>Social Link:</b> Valid link corresponded to the social network choice</li>
   <li><b>Social Network:</b> Custom choice list determine social network icon that would be displayed on target form</li>
-  
+  <li><b>Client Controller:</b> Link to newly created Client script</li>
   <li><b>Table:</b> Target table</li>
   <li><b>Target Ref:</b> filtred list contain user-ref fields type from the selected table</li>
 </ul>
