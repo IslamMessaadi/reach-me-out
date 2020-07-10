@@ -21,7 +21,8 @@
 
 # Output: 
  <p align="center">
-  <img src="https://user-images.githubusercontent.com/37014061/87205388-9f1eba80-c307-11ea-8223-645cf985ba1a.jpg" alt="app-result"/>
+  <img src="https://user-images.githubusercontent.com/37014061/87205388-9f1eba80-c307-11ea-8223-645cf985ba1a.jpg" alt="app-result-01"/>
+  <img src="https://user-images.githubusercontent.com/37014061/87206923-e9ee0180-c30a-11ea-9424-c66d371699c7.jpg" alt="app-result-02"/>
  </p>
 
 # Troubleshooting:
