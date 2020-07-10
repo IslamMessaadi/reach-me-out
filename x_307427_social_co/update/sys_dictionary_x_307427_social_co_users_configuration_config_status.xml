@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="social_url" table="x_307427_social_co_users_configuration">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="config_status" table="x_307427_social_co_users_configuration">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
@@ -14,7 +14,7 @@
         <choice/>
         <choice_field/>
         <choice_table/>
-        <column_label>Social Link</column_label>
+        <column_label>Config OK</column_label>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -27,18 +27,18 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>social_url</element>
+        <element>config_status</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <function_definition/>
         <function_field>false</function_field>
-        <internal_type display_value="String">string</internal_type>
-        <mandatory>true</mandatory>
-        <max_length>120</max_length>
+        <internal_type display_value="">boolean</internal_type>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
         <name>x_307427_social_co_users_configuration</name>
         <next_element/>
         <primary>false</primary>
-        <read_only>false</read_only>
+        <read_only>true</read_only>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -52,16 +52,16 @@
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2020-07-07 16:23:15</sys_created_on>
-        <sys_id>0bf455a7dbb11010441ce04a48961972</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>Social Link</sys_name>
+        <sys_created_on>2020-07-10 18:39:16</sys_created_on>
+        <sys_id>bf490fa7db391010441ce04a48961990</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Config OK</sys_name>
         <sys_package display_value="Reach Me Out" source="x_307427_social_co">312c4feedb355010441ce04a48961939</sys_package>
         <sys_policy/>
         <sys_scope display_value="Reach Me Out">312c4feedb355010441ce04a48961939</sys_scope>
-        <sys_update_name>sys_dictionary_x_307427_social_co_users_configuration_social_url</sys_update_name>
+        <sys_update_name>sys_dictionary_x_307427_social_co_users_configuration_config_status</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-07-10 10:09:33</sys_updated_on>
+        <sys_updated_on>2020-07-10 20:40:25</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

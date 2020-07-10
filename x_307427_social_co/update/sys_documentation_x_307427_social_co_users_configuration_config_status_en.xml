@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_documentation element="social_url" label="Social Link" language="en" table="x_307427_social_co_users_configuration">
+    <sys_documentation element="config_status" label="Config OK" language="en" table="x_307427_social_co_users_configuration">
         <sys_documentation action="INSERT_OR_UPDATE">
-            <element>social_url</element>
+            <element>config_status</element>
             <help/>
             <hint/>
-            <label>Social Link</label>
+            <label>Config OK</label>
             <language>en</language>
             <name>x_307427_social_co_users_configuration</name>
-            <plural>Social Links</plural>
+            <plural>Config OKs</plural>
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2020-07-07 16:23:15</sys_created_on>
-            <sys_id>cbf455a7dbb11010441ce04a48961972</sys_id>
-            <sys_mod_count>1</sys_mod_count>
-            <sys_name>Social Link</sys_name>
+            <sys_created_on>2020-07-10 18:39:17</sys_created_on>
+            <sys_id>caa903e7db391010441ce04a489619fb</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_name>Config OK</sys_name>
             <sys_package display_value="Reach Me Out" source="x_307427_social_co">312c4feedb355010441ce04a48961939</sys_package>
             <sys_policy/>
             <sys_scope display_value="Reach Me Out">312c4feedb355010441ce04a48961939</sys_scope>
-            <sys_update_name>sys_documentation_x_307427_social_co_users_configuration_social_url_en</sys_update_name>
+            <sys_update_name>sys_documentation_x_307427_social_co_users_configuration_config_status_en</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2020-07-09 08:30:15</sys_updated_on>
+            <sys_updated_on>2020-07-10 20:40:25</sys_updated_on>
             <url/>
             <url_target/>
         </sys_documentation>

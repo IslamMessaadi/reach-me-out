@@ -2,13 +2,13 @@
     <sys_script_fix action="INSERT_OR_UPDATE">
         <active>false</active>
         <before>false</before>
-        <description/>
+        <description>Please don't modify or delete this fix script. Keep it as inactive only.  </description>
         <flush_cache>false</flush_cache>
-        <name>SCT Template Repo - ClientSide</name>
+        <name>RMO Template Repo - ClientSide</name>
         <record_for_rollback>false</record_for_rollback>
         <run_once>false</run_once>
         <script><![CDATA[function onLoad() {
-	/*FixScript Template Repo :: 08.07.2020*/
+	/*DOM Manupilation :: Start*/
 	var doc$ = (!top.gsft_main)?top.document:top.gsft_main.document;
 	var $ = function(selector){return doc$.querySelector(selector);};
 	var $$ = function(selector){return doc$.querySelectorAll(selector);};
@@ -61,19 +61,20 @@
 	} catch (e) {
 		g_form.addErrorMessage(e.message);
 	}
+    /*DOM Manupilation :: End*/
 }]]></script>
         <sys_class_name>sys_script_fix</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-07-08 14:46:41</sys_created_on>
         <sys_id>0ff0008bdb759010441ce04a489619c0</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>SCT Template Repo - ClientSide</sys_name>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>RMO Template Repo - ClientSide</sys_name>
         <sys_package display_value="Reach Me Out" source="x_307427_social_co">312c4feedb355010441ce04a48961939</sys_package>
         <sys_policy/>
         <sys_scope display_value="Reach Me Out">312c4feedb355010441ce04a48961939</sys_scope>
         <sys_update_name>sys_script_fix_0ff0008bdb759010441ce04a489619c0</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-07-08 22:46:05</sys_updated_on>
+        <sys_updated_on>2020-07-10 19:44:21</sys_updated_on>
         <unloadable>false</unloadable>
     </sys_script_fix>
 </record_update>

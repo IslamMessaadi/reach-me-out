@@ -46,6 +46,7 @@ SctUserIcon.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 		return JSON.stringify(resArr);
 		
 	},
+	
     getFields: function() {
         var table = current.table_name;
         var listTable = [];
@@ -72,19 +73,56 @@ SctUserIcon.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
     getFields2user: function(table) {
         return "name=" + table + "^internal_type=reference^reference=sys_user";
     },
+	
+	app_health_status$:function(){
+		var gr = new GlideRecord("sys_db_object");
+		gr.addEncodedQuery('sys_update_nameISNOTEMPTY^name=sys_script_client');
+		gr.query();
+		if(gr.next()){
+			if(gr.getValue('read_access') == "1" && gr.getValue('create_access') == "1" && gr.getValue('update_access') == "1"){
+				return true;
+			}else{
+				return false;
+			}
+		}else{
+			return false;
+		}
+	},
+	
+	app_health_status:function(recId){
+		
+		var getScript= function(table){
+			var grClient = new GlideRecord("sys_script_client");
+			grClient.addQuery('name', 'RMO_onload_' + table);
+			grClient.query();
+			if (grClient.next()) {return grClient.getValue('sys_id');}
+			else{return "";}
+		};
+		
+		var gr = new GlideRecord("x_307427_social_co_users_configuration");
+		gr.addQuery('sys_id',recId);
+		gr.query();
+		if(gr.next()){
+			var cs= getScript(gr.getDisplayValue('table'));
+			return cs;
+		}else{
+			return "";
+		}
+	},
+	
     type: 'SctUserIcon'
 });]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-07-07 19:01:33</sys_created_on>
         <sys_id>63a173a6dbf55010441ce04a489619df</sys_id>
-        <sys_mod_count>24</sys_mod_count>
+        <sys_mod_count>42</sys_mod_count>
         <sys_name>SctUserIcon</sys_name>
         <sys_package display_value="Reach Me Out" source="x_307427_social_co">312c4feedb355010441ce04a48961939</sys_package>
         <sys_policy>protected</sys_policy>
         <sys_scope display_value="Reach Me Out">312c4feedb355010441ce04a48961939</sys_scope>
         <sys_update_name>sys_script_include_63a173a6dbf55010441ce04a489619df</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-07-08 22:40:35</sys_updated_on>
+        <sys_updated_on>2020-07-10 20:26:53</sys_updated_on>
     </sys_script_include>
 </record_update>
